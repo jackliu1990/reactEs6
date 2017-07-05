@@ -2,8 +2,8 @@
  * Created by liufeng on 2017/7/3.
  */
 var webpack = require('webpack');
-var path = require('path');                 //ÒıÈënodeµÄpath¿â
-var HtmlwebpackPlugin = require('html-webpack-plugin');//ÓÃÓÚ×Ô¶¨Éú³ÉHtml
+var path = require('path');                 //å¼•å…¥nodeçš„pathåº“
+var HtmlwebpackPlugin = require('html-webpack-plugin');//ç”¨äºè‡ªå®šç”ŸæˆHtml
 var env = process.env.WEBPACK_ENV;
 var outputFile;
 var plugins = [
@@ -23,22 +23,22 @@ var config = {
     entry: [
         'webpack/hot/dev-server',
         'webpack-dev-server/client?http://localhost:3000',
-        './app/index.js' //Èë¿ÚÎÄ¼ş
+        './app/index.js' //å…¥å£æ–‡ä»¶
     ],
     output: {
-        path: path.resolve(__dirname, 'dist'),  // Ö¸¶¨±àÒëºóµÄ´úÂëÎ»ÖÃÎª dist/bundle.js
+        path: path.resolve(__dirname, 'dist'),  // æŒ‡å®šç¼–è¯‘åçš„ä»£ç ä½ç½®ä¸º dist/bundle.js
         filename: outputFile
     },
     devtool: 'source-map',
     module: {
         loaders: [
-            //CssÔ¤´¦Àí
+            //Cssé¢„å¤„ç†
             {
                 test:/\.less$/,
                 loaders:['style','css','less'],
                 include: path.resolve(__dirname, 'app')
             },
-            //babelÓï·¨¹æÔò
+            //babelè¯­æ³•è§„åˆ™
             {
                 test: /\.jsx?$/,
                 loader: 'babel',
