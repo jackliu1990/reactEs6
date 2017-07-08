@@ -9,7 +9,7 @@ var outputFile;
 var plugins = [
     new HtmlwebpackPlugin({
         title: 'React Biolerplate by Linghucong',
-        template: path.resolve(__dirname, 'templates/index.ejs'),
+        template: path.resolve(__dirname, 'app/templates/index.ejs'),
         inject: 'body'
     })];
 if(env==='build'){
