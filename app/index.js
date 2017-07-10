@@ -10,15 +10,18 @@ import {reducer as HelloReducer} from './reducers/helloreducer';
 import HelloWorld from './components/HelloWorld';
 import FooBar from './components/FooBar';
 import App from './components/App';
+import Map from './components/Map';
 import './index.less';
 
 
 let helloWorldDiv= document.createElement('div');
 let footBarDiv = document.createElement('div');
 let routerDiv =document.createElement('div');
+let openlayerDiv = document.createElement("div");
 document.body.appendChild(helloWorldDiv);
 document.body.appendChild(footBarDiv);
 document.body.appendChild(routerDiv);
+document.body.appendChild(openlayerDiv);
 
 ReactDOM.render(
     <App/>,
@@ -26,6 +29,7 @@ ReactDOM.render(
 );
 ReactDOM.render(<HelloWorld/>, helloWorldDiv);
 ReactDOM.render(<FooBar/>, footBarDiv);
+//ReactDOM.render(<Map/>,openlayerDiv);
 
 //store
 let store = createStore(HelloReducer);
@@ -36,3 +40,5 @@ ReactDOM.render(
     </Provider>,
     document.getElementById('content')
 );
+
+
