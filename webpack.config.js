@@ -34,16 +34,21 @@ var config = {
         loaders: [
             //Css预处理
             {
-                test:/\.less$/,
+                test:/\.(less)$/,
                 loaders:['style','css','less'],
                 include: path.resolve(__dirname, 'app')
+            },
+            {
+                test: /\.css$/,
+                loader: 'style!css'
             },
             //babel语法规则
             {
                 test: /\.jsx?$/,
                 loader: 'babel',
                 exclude: /node_modules/
-            }
+            },
+
         ]
     },
     plugins: plugins

@@ -29,7 +29,7 @@ ReactDOM.render(
 );
 ReactDOM.render(<HelloWorld/>, helloWorldDiv);
 ReactDOM.render(<FooBar/>, footBarDiv);
-//ReactDOM.render(<Map/>,openlayerDiv);
+ReactDOM.render(<Map/>,openlayerDiv);
 
 //store
 let store = createStore(HelloReducer);
